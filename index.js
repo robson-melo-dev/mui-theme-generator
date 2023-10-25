@@ -31,5 +31,3 @@ const generateTheme = (primaryColor, secondaryColor) => {
 
 module.exports = { generateTheme };
 
-console.log(generateTheme('#456990', '#F45B69'))
-
