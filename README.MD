@@ -18,7 +18,7 @@ npm install mui-theme-generator
 
 ## Basic Usage
 ```javascript
-const { generateTheme } = require('material-ui-theme-generator');
+const { generateTheme } = require('mui-theme-generator');
 
 const theme = generateTheme();  // Uses default colors '#3f50b5' for primary and '#f44336' for secondary
 ```
@@ -26,7 +26,7 @@ const theme = generateTheme();  // Uses default colors '#3f50b5' for primary and
 ## Usage with React (using 'import')
 ```javascript
 import { ThemeProvider } from '@mui/material/styles';
-import { generateTheme } from 'material-ui-theme-generator';
+import { generateTheme } from 'mui-theme-generator';
 
 const theme = generateTheme('#4caf50', '#ff9800');
 
@@ -47,3 +47,6 @@ const { light, dark } = generateTheme('#4caf50', '#ff9800');
 
 console.log(light, dark);  // Outputs the light and dark themes
 ```
+
+## Support Us :heartpulse:
+Love using Material-UI Theme Generator? Help us maintain and improve it by donating via PayPal to sys.robson@gmail.com. Your support will go a long way in keeping this project alive and kicking! :rocket:
