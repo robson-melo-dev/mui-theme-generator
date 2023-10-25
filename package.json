@@ -1,7 +1,7 @@
 {
   "homepage": "https://github.com/robson-melo-dev/mui-theme-generator",
   "name": "mui-theme-generator",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "Material-UI Theme Generator: Easily create beautiful, cohesive Material-UI themes with automatic shade generation. Ideal for fast development and customization.",
   "main": "index.js",
   "scripts": {

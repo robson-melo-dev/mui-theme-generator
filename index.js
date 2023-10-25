@@ -1,33 +1,36 @@
 const chroma = require('chroma-js');
 
-const generateShades = (color) => {
+const generateShades = (color, isDark = false) => {
   const shades = {};
   for (let i = 1; i <= 9; i++) {
     const shadeNumber = i * 100;
-    shades[shadeNumber] = chroma(color).darken((9 - i) * 0.1).hex();
+    const factor = isDark ? (9 - i) : i; // Inverte os tons para o modo escuro
+    shades[shadeNumber] = chroma(color).darken(factor * 0.5).hex();
   }
   return shades;
 };
 
 const generateTheme = (primaryColor, secondaryColor) => {
-  const primaryShades = generateShades(primaryColor || '#3f50b5');
-  const secondaryShades = generateShades(secondaryColor || '#f44336');
+  const lightPrimaryShades = generateShades(primaryColor || '#3f50b5', false);
+  const lightSecondaryShades = generateShades(secondaryColor || '#f44336', false);
+  
+  const darkPrimaryShades = generateShades(primaryColor || '#3f50b5', true);
+  const darkSecondaryShades = generateShades(secondaryColor || '#f44336', true);
 
   return {
     palette: {
       light: {
-        primary: primaryShades,
-        secondary: secondaryShades,
-        contrastText: '#ffffff'
+        primary: lightPrimaryShades,
+        secondary: lightSecondaryShades,
+        contrastText: '#000000'
       },
       dark: {
-        primary: primaryShades,
-        secondary: secondaryShades,
-        contrastText: '#000000'
+        primary: darkPrimaryShades,
+        secondary: darkSecondaryShades,
+        contrastText: '#ffffff'
       }
     }
   };
 };
 
 module.exports = { generateTheme };
-
