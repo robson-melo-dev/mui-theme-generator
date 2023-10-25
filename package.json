@@ -1,0 +1,21 @@
+{
+  "name": "mui-theme-generator",
+  "version": "1.0.0",
+  "description": "Material-UI Theme Generator: Easily create beautiful, cohesive Material-UI themes with automatic shade generation. Ideal for fast development and customization.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "material ui",
+    "material ui theme",
+    "mui theme",
+    "material ui theme generator",
+    "mui theme generator"
+  ],
+  "author": "Robson Melo de Souza",
+  "license": "MIT",
+  "dependencies": {
+    "chroma-js": "^2.4.2"
+  }
+}
